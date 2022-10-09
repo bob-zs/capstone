@@ -452,8 +452,9 @@ export const Editor = ({ prompt, fetchPrompts }) => {
 };
 
 const mapStateToProps = ({ prompts }, { match: { params } }) => {
-  const promptId = 1 * params.promptId;
-  const prompt = prompts[promptId - 1] || {};
+  console.log(prompts);
+  const promptOrderId = 1 * params.promptOrderId;
+  const prompt = prompts[promptOrderId - 1] || {};
   return {
     prompts,
     prompt,
